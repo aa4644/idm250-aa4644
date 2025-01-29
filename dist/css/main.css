@@ -1,0 +1,231 @@
+/*
+Theme Name: IDM250 Portfolio Theme
+Theme URI: https://github.com/mrpaulphan/idm250
+Author: Paul Phan
+Author URI: https://mrpaulphan.com
+Description: This is a custom theme built for Project 1 of IDM250.
+Tags: custom, theme, project, 1
+Version: 1.0
+Requires at least: 6.1.1
+Tested up to: 6.1.1
+Requires PHP: 7.4
+*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; 
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;      
+    justify-content: center;     
+    align-items: center;        
+    height: 100vh;              
+    text-align: center;          
+}
+
+/*-------------- FONT STYLING --------------*/
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap');
+
+body, h1, h2, h3, h4, h5, h6, p, a, nav ul li {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700; 
+}
+
+.site-header h1, 
+footer h2 {
+    font-weight: 700; 
+}
+
+.site-header nav ul li a {
+    font-weight: 700; 
+}
+
+footer .left-column h2 {
+    font-weight: 700; 
+}
+
+footer p {
+    font-weight: 300; 
+}
+
+/*-------------- HEADER STYLING --------------*/
+.site-header {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 2rem 4rem; 
+    background-color: #ffffff; 
+}
+
+.site-header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; 
+    width: 100%;
+    position: relative;
+}
+
+.site-header h1 {
+    margin: 0; 
+    font-size: 20px;
+}
+
+/*-------------- NAVIGATION --------------*/
+.site-header nav {
+    display: flex;
+}
+
+.site-header nav ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    gap: 50px;
+}
+
+.site-header nav ul li {
+    margin-left: 20px; 
+}
+
+.site-header nav ul li a {
+    color: black; 
+    text-decoration: none; 
+    font-size: 20px; 
+}
+
+.site-header nav ul li a:hover {
+    text-decoration: underline; 
+}
+
+/*-------------- HAMBURGER MENU --------------*/
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ----- MOBILE STYLES ----- */
+@media (max-width: 768px) {
+    .site-header .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .site-header .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        flex-direction: column;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+    }
+
+    .site-header .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .site-header .nav-menu.active {
+        display: flex;
+    }
+}
+
+
+/*-------------- FOOTER STYLING --------------*/
+footer {
+    background-color: #1E1E1E;
+    padding: 2rem 4rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto; 
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+footer .left-column {
+    text-align: left;
+}
+
+footer .left-column h2 {
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #22B3FC, #0EFFD5); 
+    -webkit-background-clip: text; 
+    color: transparent;
+}
+
+footer .left-column p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #CCCCCC;
+}
+
+footer .right-column {
+    display: flex;
+    gap: 20px;
+}
+
+footer .social-icons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+footer .social-icons li {
+    display: inline-block;
+}
+
+footer .social-icons img {
+    height: 40px;
+    width: 40px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.1);
+    filter: brightness(1);
+}
+
+@media (max-width: 730px) {
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .right-column {
+        margin-top: 15px;
+    }
+}
