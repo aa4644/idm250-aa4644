@@ -27,8 +27,8 @@
             <nav class="nav-menu">
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">Case Studies</a></li>
-                    <li><a href="contact.php">About Me</a></li>
+                    <li><a href="case-studies.php">Case Studies</a></li>
+                    <li><a href="aboute-me.php">About Me</a></li>
                 </ul>
             </nav>
         </div>
