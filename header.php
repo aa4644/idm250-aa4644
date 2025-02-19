@@ -18,20 +18,30 @@
 
     <header class="site-header">
         <div class="header-container">
-            <h1><?php bloginfo('name'); ?></h1>
-            
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                ☰
-            </button>
+            <div class="header__logo">
+                <?php if (has_custom_logo()) : ?>
+                    <div class="site-logo">
+                        <?php the_custom_logo(); ?>
+                    </div>
+                <?php else: ?>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="site-title">
+                        <?php bloginfo('name'); ?>
+                    </a>
+                <?php endif; ?>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
 
             <nav class="nav-menu">
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="case-studies.php">Case Studies</a></li>
-                    <li><a href="aboute-me.php">About Me</a></li>
-                </ul>
+                <?php
+                wp_nav_menu([
+                    'theme_location' => 'primary-menu',
+                    'menu_class' => 'menu', 
+                    'container' => false, 
+                    'fallback_cb' => false, 
+                ]);
+                ?>
             </nav>
         </div>
     </header>
-    
 

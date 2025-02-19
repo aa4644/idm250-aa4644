@@ -18,6 +18,7 @@ Requires PHP: 7.4
 :root {
     --footer-color: #1E1E1E;
     --primary-color: #0498DC;
+    --link-color: #ba7e15;
     --tertiary-color: #E9F8FF;
     --font-body: 1rem;
     --font-meta: 1rem;
@@ -67,6 +68,44 @@ h1, h2, h3, h4, h5, h6 {
 .post p {
     margin-top: 0;  
     padding-top: 0; 
+}
+
+/*-------------------- TABLE STYLING --------------------*/
+.wp-block-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-table th {
+    background-color: black; 
+    color: white; 
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.wp-block-table td {
+    padding: 12px 15px;
+    border: 1px solid black;
+}
+
+.wp-block-table tr:first-child {
+    background-color: black;
+    color: white;
+}
+
+/*-------------------- LINK STYLING --------------------*/
+a {
+    font-weight: 700; 
+    color: var(--link-color); 
+}
+
+a:hover { 
+    color: darken(var(--link-color), 30%); 
+    text-decoration: underline; 
 }
 
 /*-------------------- META INFO --------------------*/
@@ -320,13 +359,13 @@ main {
     text-align: center;          
 }
 
-/*-------------- FONT STYLING --------------*/
+/*-------------- HEADER STYLING --------------*/
 .site-header h1, 
 footer h2 {
     font-weight: 700; 
 }
 
-.site-header nav ul li a {
+.site-header, .nav ul li a {
     font-weight: 700; 
 }
 
@@ -338,7 +377,6 @@ footer p {
     font-weight: 300; 
 }
 
-/*-------------- HEADER STYLING --------------*/
 .site-header {
     display: flex; 
     justify-content: center; 
@@ -362,6 +400,12 @@ footer p {
 }
 
 /*-------------- NAVIGATION --------------*/
+.site-title{
+    text-decoration: none;
+    color: black;
+}
+
+
 .site-header nav {
     display: flex;
 }
@@ -382,6 +426,7 @@ footer p {
     color: black; 
     text-decoration: none; 
     font-size: 20px; 
+    font-weight: 700; 
 }
 
 .site-header nav ul li a:hover {
@@ -465,7 +510,6 @@ footer .left-column h2 {
 }
 
 footer .left-column p {
-    margin: 5px 0;
     font-size: 16px;
     color: #CCCCCC;
 }
@@ -509,4 +553,66 @@ footer .social-icons img:hover {
     footer .right-column {
         margin-top: 15px;
     }
+}
+
+/*-------------- 404 STYLING --------------*/
+.error-page {
+    text-align: center;
+    padding: 50px;
+}
+
+.error-title {
+    font-size: 128px;
+    background: linear-gradient(45deg, #22B3FC, #00D8B3);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0;
+}
+
+.error-subtitle {
+    font-size: 40px;
+    background: linear-gradient(45deg, #22B3FC, #00D8B3);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 0;
+}
+
+.error-message {
+    font-size: 16px;
+    color: black;
+    margin: 20px 0;
+}
+
+.back-home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #22B3FC;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.back-home-btn:hover {
+    background-color: #00D8B3;
+}
+
+/*-------------- PAGE STYLING --------------*/
+.main-content {
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
