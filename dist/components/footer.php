@@ -1,18 +1,15 @@
 <footer class="footer">
     <div class="footer__content">
-        <!-- Footer Menu -->
         <?php
         wp_nav_menu([
-            'theme_location' => 'footer-menu', // Footer menu
+            'theme_location' => 'footer-menu', 
             'menu_class' => 'footer-menu',
             'container' => false,
         ]);
         ?>
         
-        <!-- Copyright Section -->
         <p class="footer__text">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
         
-        <!-- Social Media Icons -->
         <div class="social-icons">
             <ul>
                 <li><a href="https://www.facebook.com/your-facebook-page"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/facebook_icon.png" alt="Facebook" height="50"></a></li>
