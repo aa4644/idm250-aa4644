@@ -146,7 +146,6 @@ a:hover {
 
 h2.wp-block-heading {
     font-size: var(--font-h2);
-    padding: 0 0 10px 0;  
     margin: 0;  
 }
 
@@ -171,7 +170,7 @@ h6.wp-block-heading {
 }
 
 /*-------------------- IMAGES --------------------*/
-.wp-block-image img {
+.post-thumbnail img {
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -616,3 +615,122 @@ footer .social-icons img:hover {
     margin: 0 auto;
     padding: 20px;
 }
+
+/*-------------- PROJECT STYLING --------------*/
+.single-project {
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project-thumbnail img {
+    width: 100vw; 
+    height: auto;
+    margin: 0; 
+    display: block; 
+    position: relative;
+    left: 50%; 
+    transform: translateX(-50%); 
+    max-width: 2000px; 
+}
+
+.project-title {
+    font-size: var(--font-title);
+    font-weight: 700;  
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.project p {
+    margin-top: 0;  
+    padding-top: 0; 
+}
+
+/* ----- MOBILE STYLES FOR single-projects.php ----- */
+@media (max-width: 768px) {
+    .project-thumbnail img {
+        width: 100vw; 
+        height: auto;
+        max-width: 100%; 
+        margin: 0;
+    }
+
+    .single-project {
+        width: 80%;
+    }
+
+    .project-title {
+        font-size: 2rem; 
+        margin-bottom: 10px; 
+    }
+}
+
+/* ----- LARGE LAYOUT TEMPLATE STYLING ----- */
+.large-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.wp-block-image {
+    text-align: center;
+}
+
+.wp-block-image img {
+    display: inline-block;
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+/* Basic menu styling */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Dropdown Menu */
+.nav-menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+}
+
+.nav-menu li:hover > ul {
+    display: block;
+}
+
+.nav-menu li ul li {
+    width: 100%;
+}
+
+.nav-menu li ul li a {
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+}
+
+.nav-menu li ul li a:hover {
+    color: var(--primary-color);
+}
+
+
+

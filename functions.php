@@ -177,5 +177,6 @@ function theme_customize_register($wp_customize) {
 
 add_action('customize_register', 'theme_customize_register');
 
+require get_template_directory() . '/dist/includes/post-types.php';
 
 
