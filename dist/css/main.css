@@ -18,7 +18,7 @@ Requires PHP: 7.4
 :root {
     --footer-color: #1E1E1E;
     --primary-color: #0498DC;
-    --link-color: #ba7e15;
+    --secondary-color: #ba7e15;
     --tertiary-color: #E9F8FF;
     --font-body: 1rem;
     --font-meta: 1rem;
@@ -44,6 +44,12 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700; 
 }
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
 
 /*-------------------- POST CONTAINER --------------------*/
 .post-container {
@@ -100,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 /*-------------------- LINK STYLING --------------------*/
 a {
     font-weight: 700; 
-    color: var(--link-color); 
+    color: var(--secondary-color); 
 }
 
 a:hover { 
@@ -121,7 +127,7 @@ a:hover {
 }
 
 .post-meta a {
-    color: #0073e6;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
@@ -597,24 +603,6 @@ footer .social-icons img:hover {
     background-color: #00D8B3;
 }
 
-/*-------------- PAGE STYLING --------------*/
-.main-content {
-    width: 60%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.page-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
 /*-------------- PROJECT STYLING --------------*/
 .single-project {
@@ -685,7 +673,7 @@ footer .social-icons img:hover {
 }
 
 
-/* Basic menu styling */
+/* ----- MENU STYLING ----- */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -704,7 +692,7 @@ footer .social-icons img:hover {
     color: #333;
 }
 
-/* Dropdown Menu */
+/* ----- DROPDOWN MENU ----- */
 .nav-menu li ul {
     display: none;
     position: absolute;
@@ -712,7 +700,7 @@ footer .social-icons img:hover {
     left: 0;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 200px;
+    min-width: 250px;
 }
 
 .nav-menu li:hover > ul {
@@ -724,8 +712,7 @@ footer .social-icons img:hover {
 }
 
 .nav-menu li ul li a {
-    padding: 10px 15px;
-    border-top: 1px solid #ddd;
+    font-size: 16px; 
 }
 
 .nav-menu li ul li a:hover {
@@ -733,4 +720,356 @@ footer .social-icons img:hover {
 }
 
 
+/*-------------- FRONTPAGE STYLING --------------*/
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.latest-posts,
+.latest-projects {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.latest-posts h2,
+.latest-projects h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.latest-posts a,
+.latest-projects a {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+}
+
+.latest-posts article,
+.latest-projects article {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    max-width: 350px; 
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.latest-posts article:hover,
+.latest-projects article:hover {
+    transform: translateY(-5px);
+}
+
+.latest-posts article a img,
+.latest-projects article a img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/*-------------- ABOUT ME STYLING --------------*/
+.about-me-container {
+    display: flex;
+    align-items: center; 
+    gap: 100px; 
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.about-me-content {
+    flex: 1;
+    max-width: 50%; 
+}
+
+.about-me-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    padding-left: 3.5rem;
+}
+
+.about-me-text p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    padding-left: 9.3rem;
+}
+
+.featured-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+}
+
+.other-content {
+    margin-top: 40px; 
+}
+
+
+/*-------------- LARGE LAYOUT STYLING --------------*/
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.large-about-me-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 100px; 
+    margin-bottom: 40px; 
+}
+
+.large-about-me-content {
+    flex: 1;
+}
+
+.large-about-me-text p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.large-featured-image {
+    flex-shrink: 0; 
+    max-width: 40%; 
+    margin-top: 20px; 
+}
+
+.large-page-header {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.other-content {
+    margin-top: 40px;
+}
+
+
+/*-------------- PAGE STYLING --------------*/
+.main-content {
+    width: 75%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-header {
+    align-items: center;
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*-------------- ARCHIVE STYLING --------------*/
+.archive-header {
+    display: flex;
+    justify-content: center;
+
+}
+
+.archive-wrapper {
+    width: 60%;
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.archive-page .page-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.archive-page .post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;                
+}
+
+.archive-page .post-list article {
+    display: flex;             
+    flex-direction: column;    
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;      
+    height: 100%; 
+}
+
+.archive-page .pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.post-list {
+    gap: 60px;
+    margin-top: 10px;
+}
+
+
+/* ----- PROJECT LISTING ----- */
+.centered-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    margin-top: 34px;
+}
+
+.project-listing {
+    width: 60%;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+    display: grid;             
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;  
+}
+
+.project-listing h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-listing .project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.project-listing .project-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project-listing .project-item h2 a {
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: none;
+}
+
+.project-listing .project-item h2 a:hover {
+    text-decoration: underline;
+}
+
+.project-listing .pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/*-------------- BLOG CARD STYLING --------------*/
+.blog-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    max-width: 350px; 
+    height: 360px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card-image {
+    margin-bottom: 15px;
+}
+
+.blog-card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.blog-card-image a:hover img {
+    transform: scale(1.05);
+}
+
+.blog-card-title {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.blog-card-title a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.blog-card-title a:hover {
+    text-decoration: underline;
+}
+
+.blog-card-excerpt {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.blog-card-meta {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.blog-card-meta span {
+    margin-right: 10px;
+}
+
+.blog-card-date {
+    font-style: italic;
+}
+
+.blog-card-category {
+    font-weight: bold;
+}
+
+.blog-card-read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1em;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.blog-card-read-more:hover {
+    text-decoration: underline;
+}
+
+/* ----- FRONT PAGE STYLING ----- */
+.front-page-featured-image {
+    text-align: center; 
+    margin: 0 auto;   
+}
+
+.front-page-featured-image img {
+    max-width: 100%;  
+    height: auto;    
+}
 

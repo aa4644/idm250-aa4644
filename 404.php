@@ -16,7 +16,6 @@
     </h2>
     <p class="error-message">
         <?php 
-        // 
         echo esc_html__('Sorry, the page you’re looking for doesn’t exist!', 'kismet'); 
         ?>
     </p>

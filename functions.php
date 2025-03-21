@@ -180,3 +180,53 @@ add_action('customize_register', 'theme_customize_register');
 require get_template_directory() . '/dist/includes/post-types.php';
 
 
+// Customizer Color Settings
+function mytheme_customize_register( $wp_customize ) {
+    // Primary Color Setting
+    $wp_customize->add_setting('primary_color', array(
+        'default'   => '#0498DC', 
+        'transport' => 'refresh', 
+    ));
+
+    // Primary Color Control 
+    $wp_customize->add_control(new WP_Customize_Color_Control(
+        $wp_customize, 'primary_color', array(
+            'label'    => __('Primary Color', 'mytheme'),
+            'section'  => 'colors',
+            'settings' => 'primary_color',
+        )
+    ));
+
+    // Secondary Color Setting
+    $wp_customize->add_setting('secondary_color', array(
+        'default'   => '#ba7e15', 
+        'transport' => 'refresh', 
+    ));
+
+    // Secondary Color Control 
+    $wp_customize->add_control(new WP_Customize_Color_Control(
+        $wp_customize, 'secondary_color', array(
+            'label'    => __('Secondary Color', 'mytheme'),
+            'section'  => 'colors',
+            'settings' => 'secondary_color',
+        )
+    ));
+}
+
+add_action('customize_register', 'mytheme_customize_register');
+
+function add_custom_css_variables() {
+    $primary_color = get_theme_mod('primary_color', '#0498DC');
+    $secondary_color = get_theme_mod('secondary_color', '#ba7e15');
+    
+    ?>
+    <style>
+        :root {
+            --primary-color: <?php echo esc_attr($primary_color); ?>;
+            --secondary-color: <?php echo esc_attr($secondary_color); ?>;
+        }
+    </style>
+    <?php
+}
+add_action('wp_head', 'add_custom_css_variables');
+
